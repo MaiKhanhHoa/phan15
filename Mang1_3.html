@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="ip1">
+<input type="number" id="ip2">
+<button type="button" onclick="sosanh()">Kiem tra</button>
+</body>
+<script>
+  function sosanh() {
+    let a = +document.getElementById("ip1").value
+    let b = +document.getElementById("ip2").value
+    if (a>b) {
+      alert("So thu nhat > So thu 2")
+    }
+    else {
+      alert("Tong: "+ (a+b))
+    }
+  }
+</script>
+</html>

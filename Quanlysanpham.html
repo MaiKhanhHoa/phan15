@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<button type="button" onclick="add()">Add</button>
+<button type="button" onclick="hienthi()">Hien Thi</button>
+<table border="1" id="hienthi">
+</table>
+<h3 id="edit"></h3>
+</body>
+<script>
+    let arr = ["Iphone", "Samsung", "Nokia", "Sony"]
+
+    function add() {
+        arr.push(document.getElementById("input").value)
+        document.getElementById("input").value = ""
+        alert("Da them vao danh sach")
+    }
+
+    function hienthi() {
+        let str = ""
+        for (let i = 0; i < arr.length; i++) {
+            str += "<tr>" + "<td>" + arr[i] + "</td>" +
+                "<td><button onclick='sua(" + i + ")'>Edit</button></td>" +
+                "<td><button onclick='xoa(" + i + ")'>Delete</button></td>" + "</tr>"
+        }
+        document.getElementById("hienthi").innerHTML = str
+    }
+
+    function xoa(i) {
+        arr.splice(i, 1)
+        hienthi()
+    }
+
+    function sua(i) {
+        let str = ""
+        str = "<input type='text' id='suaten'><button onclick='save(" + i + ")'>Save</button>"
+        document.getElementById("edit").innerHTML = str
+    }
+
+    function save(i) {
+        arr[i] = document.getElementById("suaten").value
+        hienthi()
+    }
+</script>
+</html>

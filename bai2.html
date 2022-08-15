@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" id="input">
+    <select id="luachon">
+        <option value="meters">meters</option>
+        <option value="feet">feet</option>
+    </select>
+    <br>
+    <button type="button" onclick="tinhtoan()">Kết quả</button>
+    <h3 id="hienthi"></h3>
+</body>
+<script>
+    function tinhtoan() {
+        let a = document.getElementById("input").value
+        let b = document.getElementById("luachon").value
+        if (b=="meters") {
+            ketqua = 3.279*a;
+        }
+        if (b=="feet") {
+            ketqua = 0.305*a
+        }
+        document.getElementById("hienthi").innerHTML = ketqua
+    }
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let temp = true
+
+    function kiemtra(a) {
+        for (i = 0; i < a.length; i++) {
+            if (a[i] == a[a.length - i - 1]) {
+                temp = true;
+            } else {
+                temp = false;
+                break;
+            }
+        }
+        if (temp) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let a = prompt('nhap chuoi')
+    b = kiemtra(a)
+    alert(b)
+
+</script>
+</html>
+

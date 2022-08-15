@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="kiemtra()">Click</button>
+</body>
+<script>
+    function kiemtra() {
+        let characterForCheck = prompt("Nhap vao ky tu kiem tra")
+        let COUNT = 0
+        let arr = new Array(10)
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = prompt('nhap cac phan tu cua mang')
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === characterForCheck) {
+                COUNT++
+            }
+            if (COUNT === 0) {
+                document.write('khong co gia tri trong mang')
+                break
+            }
+        }
+        document.write(COUNT)
+    }
+</script>
+</html>

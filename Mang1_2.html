@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="nhapso">
+<button type="button" onclick="input()">Click</button>
+<h3 id="output"></h3>
+</body>
+<script>
+    function input() {
+        let a = +document.getElementById("nhapso").value
+        b = a + 1;
+        document.getElementById("output").innerHTML = b
+    }
+</script>
+</html>

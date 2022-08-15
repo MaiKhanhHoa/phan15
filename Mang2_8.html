@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="ketqua()">Click</button>
+</body>
+<script>
+    function ketqua() {
+        let arr = new Array(10)
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = +prompt()
+        }
+        document.write(arr.reverse())
+    }
+</script>
+</html>
